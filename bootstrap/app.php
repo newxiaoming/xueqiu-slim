@@ -32,4 +32,9 @@ $container['view'] = function($container){
     return $view;
 };
 
+$container['HomeController'] = function ($container)
+{
+    return new \App\Home\Controllers\HomeController($container);
+};
+
 require __DIR__ . '/../routes/routes.php';

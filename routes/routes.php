@@ -7,6 +7,8 @@
  * Time: 1:54
  */
 
-$app->get('/',function($request, $response){
-    return $this->view->render($response , 'home/home.twig');
-});
+//$app->get('/',function($request, $response){
+//    return $this->view->render($response , 'home/home.twig');
+//});
+
+$app->get('/','HomeController:index');

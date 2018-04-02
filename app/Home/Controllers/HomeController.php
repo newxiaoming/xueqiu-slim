@@ -7,12 +7,14 @@
  * Time: 2:49
  */
 
-namespace App\Home\Controller;
+namespace App\Home\Controllers;
 
-class HomeController
+use Slim\Views\Twig as View;
+
+class HomeController extends Controller
 {
-    public function index()
+    public function index($request, $response)
     {
-        return "HomeController";
+        return $this->view->render($response, 'home/home.twig');
     }
 }
